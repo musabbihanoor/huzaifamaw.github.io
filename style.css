@@ -1,0 +1,753 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 200vh;
+}
+
+header {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 100000;
+}
+
+header.sticky {
+  padding: 5px 100px;
+  background: #fff;
+}
+
+header .menu-wrap {
+  display: none;
+}
+
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+  color: #000;
+}
+
+.banner {
+  position: relative;
+  color: #555555;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  font-family: "Roboto Mono", monospace;
+}
+
+.banner div.home {
+  background: #141e30;
+  background: -webkit-linear-gradient(to right, #243b55, #141e30);
+  background: linear-gradient(to right, #243b55, #141e30);
+
+  height: 80vh;
+  display: flex;
+  padding-top: 120px;
+  padding-left: 120px;
+}
+
+.home-image {
+  flex: 1;
+}
+
+.home-image img {
+  border-radius: 5px;
+  box-shadow: 0 0 27px rgba(96, 96, 96, 0.34);
+  width: 80%;
+  height: 450px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-top: 10px;
+  position: relative;
+  top: 40px;
+}
+
+.home-info {
+  color: #fff;
+  flex: 2;
+  padding-top: 5%;
+}
+
+.home-info div {
+  display: flex;
+}
+
+.home-info h1 {
+  font-size: 44px;
+  line-height: 50px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.home-info p {
+  margin-bottom: 1em;
+}
+
+.home-info h2 {
+  opacity: 0.4;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.home-info h3 {
+  margin-bottom: 15px;
+  margin-left: 0;
+  display: block;
+  margin-inline-start: 40px;
+  font-size: 15px;
+}
+
+.resume,
+.home .hi,
+.projects,
+section.gigs {
+  padding: 120px 60px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.resume h1,
+.home .hi h1,
+.projects h1,
+.contact h1,
+.gigs h1 {
+  font-weight: 800;
+  font-size: 44px;
+}
+
+.resume p,
+.home .hi p {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.home .hi a {
+  background-color: #182438;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 15px;
+  min-width: 170px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  margin-top: 20px;
+  transition: all 0.3s;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home .hi a:hover {
+  background-color: #21364e;
+}
+
+hr {
+  color: #555;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.resume h3 {
+  margin-top: 120px;
+  font-family: Roboto Mono, monospace;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #999;
+  margin-bottom: 40px;
+}
+
+.resume .list-item {
+  border-left: 2px solid #243b55;
+  padding-left: 25px;
+  padding-bottom: 50px;
+  font-size: 1.5rem;
+  display: block;
+}
+
+.resume .list-item:before {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #243b55;
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background-color: #fff;
+  left: 170px;
+}
+
+.resume .list h4 {
+  text-transform: uppercase;
+  color: #243b55;
+  line-height: 20px;
+  font-family: Roboto, monospace;
+  font-weight: 600;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
+.resume .list h5 {
+  font-family: Inconsolata, monospace;
+  line-height: 20px;
+  color: #999;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.resume .list h6 {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.skill-info,
+.skill {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-right,
+.skill-left {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.skill-info h1,
+.skill-info h2 {
+  font-family: Inconsolata, monospace;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.skill-progress {
+  display: flex;
+  overflow: hidden;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: center;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  height: 10px;
+  line-height: 1rem;
+  background-color: #243b55;
+}
+
+.project-img {
+  flex: 1;
+}
+
+.project-info {
+  border: 1px solid #f1f1f1;
+  padding: 50px 50px 40px 30px;
+  flex: 1;
+}
+
+.project-info h1,
+.gig-info h2 {
+  font-size: 18px;
+  line-height: 30px;
+  font-family: Roboto Mono, monospace;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.project-info p,
+.gig-info p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 45px;
+  font-family: Roboto, sans-serif;
+}
+
+.project-info h3 {
+  font-family: Roboto Mono, monospace;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.project-img img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-stack,
+.project-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  margin: 50px 0;
+}
+
+.project-item:hover,
+.gig-item:hover {
+  box-shadow: 0px 1px 30px 0px rgba(154, 154, 154, 0.75);
+}
+
+.project-stack h4 {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.project-info a,
+.gig-info a {
+  margin-top: 55px;
+  font-family: Roboto Mono, monospace;
+  font-size: 14px;
+  line-height: 20px;
+  float: right;
+  color: #243b55;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.project-info a:hover,
+.gig-info a:hover {
+  text-decoration: #243b55 underline;
+}
+
+div.gigs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+
+.gig-item {
+  width: 30%;
+  margin: 10px;
+  border: 1px solid #f1f1f1;
+}
+
+.gig-item .gig-img img {
+  width: 100%;
+}
+
+.gig-info {
+  padding: 10px;
+}
+
+.contact {
+  height: 100vh;
+  color: #fff;
+  background: #141e30;
+  background: -webkit-linear-gradient(to right, #243b55, #141e30);
+  background: linear-gradient(to right, #243b55, #141e30);
+  padding-top: 120px;
+  padding-left: 120px;
+}
+
+.contact h1 {
+  margin-bottom: 50px;
+}
+
+.contact-info {
+  display: flex;
+}
+
+.contact-info .detail-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.contact-info .detail-item h2 {
+  float: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto Mono, monospace;
+  margin-right: 50px;
+}
+
+.contact-info .detail-item h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto Mono, monospace;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-detail a {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin-top: 50px;
+}
+
+.contact-detail a:hover {
+  text-decoration: #fff underline;
+  cursor: pointer;
+}
+
+.contact-letter {
+  padding: 0 50px;
+  width: 100%;
+  color: #fff;
+}
+
+.contact-letter p {
+  letter-spacing: 3px;
+}
+
+.letter-input {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.letter-input input,
+.letter-input textarea {
+  width: 50%;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  font: 400 15px Arial;
+  margin: 10px 0;
+}
+
+.letter-input input::placeholder,
+.letter-input textarea::placeholder {
+  color: #fff;
+}
+
+.letter-input textarea {
+  height: 120px;
+}
+
+.letter-input #button {
+  border: none;
+  box-shadow: 0 1px 29px rgba(0, 0, 0, 0.16);
+  position: relative;
+  background-color: #141e30;
+  border-radius: 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.letter-input #button:hover {
+  cursor: pointer;
+  background-color: #21364e;
+}
+
+@media screen and (max-width: 1150px) {
+  .project-item {
+    flex-direction: column;
+  }
+
+  .gig-item {
+    width: 45%;
+  }
+
+  .letter-input input,
+  .letter-input textarea {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home-image {
+    display: none;
+  }
+
+  header .nav,
+  header .logo {
+    display: none;
+  }
+
+  header .menu-wrap {
+    display: block;
+  }
+
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: rgba(13, 110, 139, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+
+  /* Moves Line Down */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+
+  /* Turns Lines Into X */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  /* Rotate On Hover When Checked */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    background: rgba(24, 39, 51, 0.85);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+
+  section.gigs {
+    margin: 0;
+  }
+
+  .gig-item {
+    width: 100%;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .contact-link {
+    display: inline-block;
+    margin: 50px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header ul {
+    flex-direction: column;
+  }
+
+  .banner div.home {
+    padding: 20px;
+    height: 100vh;
+  }
+
+  .home-info p {
+    margin-bottom: 50px;
+  }
+
+  .resume,
+  .home .hi {
+    margin: 0;
+  }
+
+  .resume .list-item:before {
+    left: 50px;
+  }
+
+  .skill {
+    flex-direction: column;
+  }
+
+  .skill-right,
+  .skill-left {
+    width: 80%;
+  }
+
+  .projects {
+    margin: 0;
+  }
+
+  .contact {
+    padding-left: 20px;
+  }
+
+  .letter-input input,
+  .letter-input textarea {
+    width: 100%;
+  }
+}

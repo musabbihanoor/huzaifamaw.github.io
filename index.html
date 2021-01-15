@@ -1,0 +1,656 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "huzaifamawahab@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/95ebf6ece4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Hu. Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Hu.</a>
+      <div class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#gigs">Gigs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger">
+          <div></div>
+        </div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#gigs">Gigs</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <section class="home">
+        <div class="home">
+          <div class="home-image">
+            <img src="profile.jpg" alt="" />
+          </div>
+          <div class="home-info">
+            <h1>Huzaifa Muhammad Abdul Wahab_</h1>
+            <p>Web developer, Data scientist</p>
+            <div>
+              <h2>Age:</h2>
+              <h3>21</h3>
+            </div>
+            <div>
+              <h2>Phone:</h2>
+              <h3>+92 315 2261159</h3>
+            </div>
+            <div>
+              <h2>Email:</h2>
+              <h3>huzaifamawahab@gmail.com</h3>
+            </div>
+            <div>
+              <h2>Address:</h2>
+              <h3>Karachi, Pakistan</h3>
+            </div>
+          </div>
+        </div>
+        <section class="hi" id="home">
+          <h1>Hi_</h1>
+          <p>
+            This is Huzaifa. I’m a data scientist and a web developer. Currently
+            I am a student at Bahria University, Pakistan. I’m in third year of
+            my graduation and I am graduating with a degree of Computer Science.
+            I consider myself as a good story teller & a curious and
+            argumentative person. I also like to play football and I LOVE binge
+            watching Netflix.
+          </p>
+          <a
+            href="https://www.dropbox.com/s/kzlxkrfrvmhrrmq/Huzaifa%27s%20CV.pdf?dl=0"
+            ><i class="fas fa-arrow-down"></i> Download CV</a
+          >
+        </section>
+        <hr />
+      </section>
+      <section class="resume" id="resume">
+        <h1>Resume_</h1>
+        <p>
+          I can create machine learning models. My preferred language is python
+          but i can also work with R and Scala as well. I’m comfortable to work
+          as data visualizer and data analyst. I have also worked in web
+          development and my core technology was JAM stack.
+        </p>
+        <h3>Education</h3>
+        <div class="list">
+          <div class="list-item">
+            <h4>bahria university, karachi campus</h4>
+            <h5>2018-Present</h5>
+            <h6>Bachelor's of Computer Science</h6>
+          </div>
+          <div class="list-item">
+            <h4>new fazaia intermediate college, karachi</h4>
+            <h5>2015-2017</h5>
+            <h6>Intermediate (Pre-Engineering)</h6>
+          </div>
+        </div>
+        <h3>Certification</h3>
+        <div class="list">
+          <div class="list-item">
+            <h4>Microsoft Office specialist - 2010</h4>
+            <h5>2018</h5>
+            <h6>By Microsoft</h6>
+          </div>
+          <div class="list-item">
+            <h4>What is data science</h4>
+            <h5>2021</h5>
+            <h6>By IBM</h6>
+          </div>
+          <div class="list-item">
+            <h4>Tools for data science</h4>
+            <h5>2021</h5>
+            <h6>By IBM</h6>
+          </div>
+          <div class="list-item">
+            <h4>Data Science Methodology</h4>
+            <h5>2021</h5>
+            <h6>By IBM</h6>
+          </div>
+        </div>
+        <h3>General Skills</h3>
+        <div class="skill">
+          <div class="skill-left">
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">Python</h1>
+                <h2 class="skill-perc">85%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 85%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">C++</h1>
+                <h2 class="skill-perc">85%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 85%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1>SQL</h1>
+                <h2>90%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 90%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">Kubernetes</h1>
+                <h2 class="skill-perc">60%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 60%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">React</h1>
+                <h2 class="skill-perc">50%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 50%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">CSS3</h1>
+                <h2 class="skill-perc">90%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 90%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">Ms Office</h1>
+                <h2 class="skill-perc">80%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 80%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">Git</h1>
+                <h2 class="skill-perc">90%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 90%"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-right">
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">Java</h1>
+                <h2 class="skill-perc">85%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 85%"
+                ></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">JavaScript</h1>
+                <h2 class="skill-perc">90%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 90%"
+                ></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">Docker</h1>
+                <h2 class="skill-perc">60%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 60%"
+                ></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">MaterialUI</h1>
+                <h2 class="skill-perc">60%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 60%"
+                ></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">HTML:5</h1>
+                <h2 class="skill-perc">90%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 90%"
+                ></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">Bootstrap</h1>
+                <h2 class="skill-perc">100%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 100%"
+                ></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <h1 class="skill-name">jQuery</h1>
+                <h2 class="skill-perc">70%</h2>
+              </div>
+              <div class="skill-progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="80"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 70%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="project">
+        <h1>My projects_</h1>
+        <div class="project-item">
+          <div class="project-img">
+            <img
+              src="./imgs/lexical.png"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <h1>Lexical and Syntax Analyzer.</h1>
+            <p>
+              Implemented in python. Focused on the C++ syntax
+              grammar. Contains token generator, symbol table
+              and recursive decent parser
+            </p>
+            <h3>used technology:</h3>
+            <div class="project-stack">
+              <h4>python</h4>
+            </div>
+            <a href="https://github.com/huzaifamaw/Lexical_Analyzer-Parser_Implemented-in-Python" target="_blank">Visit</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-img">
+            <img
+              src="./imgs/database.png"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <h1>Online Food Ordering System - Database</h1>
+            <p>
+              Designed and implemented in Oracle DB. This
+database was designed to focus on every aspect of a
+food ordering system.
+            </p>
+            <h3>used technology:</h3>
+            <div class="project-stack">
+              <h4>OracleDB</h4>
+              <h4>SQL</h4>
+            </div>
+            <a href="https://github.com/huzaifamaw/oracledb_online_food_ordering_system" target="_blank">Visit</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-img">
+            <img
+              src="./imgs/do-desktop-application-development.png"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <h1>Restaurant Management System - POS</h1>
+            <p>
+              A desktop application developed in java. A complete
+restaurant management system, includes every
+module required for any restaurant
+            </p>
+            <h3>used technology:</h3>
+            <div class="project-stack">
+              <h4>Java</h4>
+              <h4>Swing API</h4>
+              <h4>MySQL</h4>
+            </div>
+            <a href="https://github.com/huzaifamaw/Point_of_sale_java_SWING_API" target="_blank">Visit</a>
+          </div>
+          
+        </div>
+      
+        <div class="project-item">
+          <div class="project-img">
+            <img
+              src="./imgs/160-1609318_document-management-system-png-transparent-png.png"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <h1>Document Management System</h1>
+            <p>
+              Based on Java swing API, capable of storing,
+retrieving and managing Documents using MS SQL
+SERVER as a database. Also capable of searching
+Documents by Their names, created date etc. Also
+capable of reading any Image File.
+            </p>
+            <h3>used technology:</h3>
+            <div class="project-stack">
+              <h4>java</h4>
+              <h4>Swing API</h4>
+              <h4>SQL Server</h4>
+              
+            </div>
+            <a href="https://github.com/huzaifamaw/DMS_Document_management_system" target="_blank">Visit</a>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-img">
+            <img
+              src="./imgs/shhopmanagementsystem.jpg"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <h1>Shop Management System</h1>
+            <p>
+              Based on MS ACCESS, capable managing Shop’s items
+and generating receipts for each order. Also capable
+of storing records in MS ACCESS as a database.
+            </p>
+            <h3>used technology:</h3>
+            <div class="project-stack">
+              <h4>MS Access</h4>
+              <h4>VBA</h4>
+              
+              
+            </div>
+            <a href="https://github.com/huzaifamaw/shop_management_system_MSACCES_practice_project" target="_blank">Visit</a>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-img">
+            <img
+              src="./imgs/abcd.png"
+              alt=""
+            />
+          </div>
+          <div class="project-info">
+            <h1>Expense Tracker App</h1>
+            <p>
+              A very simple and basic React.js application, developed to stimulate the management of daily expenses
+            </p>
+            <h3>used technology:</h3>
+            <div class="project-stack">
+              <h4>CSS3</h4>
+              <h4>HTML5</h4>
+              <h4>React.js</h4>
+              <h4>Bootstrap 4</h4>
+              
+              
+            </div>
+            <a href="http://huzaifamaw_react_expence_tracker.surge.sh/" target="_blank">Visit</a>
+          </div>
+        </div>
+      </section>
+      <section class="gigs" id="gigs">
+        <h1>My gigs_</h1>
+        <div class="gigs">
+          <div class="gig-item">
+            <div class="gig-img">
+              <img
+                src="./imgs/a.png"
+                alt=""
+              />
+            </div>
+            <div class="gig-info">
+              <h2>I will teach you python programming language</h2>
+              <p>
+                First of all these lessons are for beginners only having zero experience in programming. I will cover some very basic topics such as variables, data types, loops, iterations, functions, etc and then I will move on towards OOP concepts.For the standard package, I will also cover how to connect Python with MySQL database and I will also teach you SQL Query Language.For the premium package, we will create a Project covering all of the topics covered in lectures.
+              </p>
+              <a href="https://www.fiverr.com/huzaifamaw/teach-you-python-programming-language" target="_blank">Visit</a>
+            </div>
+          </div>
+          <div class="gig-item">
+            <div class="gig-img">
+              <img
+                src="./imgs/do-desktop-application-development (1).png"
+                alt=""
+              />
+            </div>
+            <div class="gig-info">
+              <h2>I will do desktop application development            </h2>
+              <p>
+                I can provide maximum quality desktop applications. Whether you have a large organization or small or even you want to complete your semester projects I'm here. I can make your desires comes true.I can provide any type of application whether it's a POS System or any other software. I will provide quality design with fast service.
+                So why waste time ? Be my best customer
+              </p>
+              <a href="https://www.fiverr.com/huzaifamaw/do-desktop-application-development" target="_blank">Visit</a>
+            </div>
+          </div>
+
+          
+      </section>
+
+      <section class="contact" id="contact">
+        <h1>Get in touch_</h1>
+        <div class="contact-info">
+          <div class="contact-detail">
+            <div class="detail-item">
+              <h2>phone</h2>
+              <h3>+92 315 2261159</h3>
+            </div>
+            <div class="detail-item">
+              <h2>skype</h2>
+              <h3>huzaifamawahab</h3>
+            </div>
+            <div class="detail-item">
+              <h2>email</h2>
+              <h3>huzaifamawahab@gmail.com</h3>
+            </div>
+            <div class="contact-link">
+              <a><i class="fab fa-whatsapp"></i> Facebook</a>
+              <a><i class="fab fa-instagram"></i> Instagram</a>
+              <a><i class="fab fa-github"></i> Github</a>
+              <a><i class="fab fa-linkedin"></i> Linkedin</a>
+            </div>
+          </div>
+          <div class="contact-letter">
+            <p>Or just mail me here_</p>
+            <form
+              class="letter-input"
+              action="mailto:huzaifamawahab@gmail.com"
+              method="post"
+              id="contact-form"
+            >
+              <!-- <input name="name" type="text" placeholder="Your name" />
+              <input name="email" type="email" placeholder="Your e-mail" />
+              <textarea
+                name="message"
+                type="text"
+                placeholder="Type the message here"
+              ></textarea> -->
+              <input type="submit" name="submit" value="Send" id="button" />
+
+            </form>
+            <h6 style="font-size: 70%;"> Developed by: <a style=" text-decoration: none; color: white; " class="" href="https://github.com/musabbihanoor" target="_blank">Musabbiha Noor</a> <br> Copyright. All rights reserved.</h6>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+  </body>
+</html>
